@@ -6,7 +6,7 @@ _NORMAL=$(tput rmso)
 function bold_if_contains_prod() {
   clustername=$1
   if [[ $clustername == *prod* ]]; then
-    echo "$_HIGHLIGHT$clustername$_NORMAL"
+    echo "$clustername" | tr a-z A-Z
   else
     echo $clustername
   fi
